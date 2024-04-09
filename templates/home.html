@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zevi Lift Assignment</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #2b2b2b;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 0 rgba(0, 255, 170, 0.5);
+      padding: 40px;
+      width: 400px;
+    }
+
+    .form-container h2 {
+      color: #00ffaa;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-container input {
+      background-color: #1e1e1e;
+      border: none;
+      border-radius: 5px;
+      color: #00ffaa;
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .form-container button {
+      background-color: #00ffaa;
+      border: none;
+      border-radius: 5px;
+      color: #1e1e1e;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .form-container button:hover {
+      background-color: #00e699;
+    }
+
+    #result-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #2b2b2b;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 0 rgba(0, 255, 170, 0.5);
+      color: #00ffaa;
+      padding: 40px;
+      width: 600px;
+      display: none;
+    }
+
+    #result-popup h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #result-popup pre {
+      background-color: #1e1e1e;
+      border-radius: 5px;
+      padding: 20px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 16px;
+    }
+
+    #result-popup button {
+      background-color: #00ffaa;
+      border: none;
+      border-radius: 5px;
+      color: #1e1e1e;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 20px auto 0;
+    }
+
+    #result-popup button:hover {
+      background-color: #00e699;
+    }
+  </style>
+</head>
+<body>
+    {% if num_lifts %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-container">
+            <h2>Building Information</h2>
+            <input name="lifts" type="number" id="lifts" placeholder="Number of Lifts" value="{{num_lifts}}" />
+            <input name="floors" type="number" id="floors" placeholder="Number of Floors" value="{{num_floors}}"  />
+            {% for i in liftrange %}
+            <input name="lift{{i}}" type="number" id="lift{{i}}" placeholder="Starting floor of lift {{i}}" />
+            <input name="lift{{i}}" type="number" id="lift{{i}}" placeholder="Destination floor of lift {{i}}" />
+            {% endfor %}
+            <button type="Submit">Submit</button>
+          </div>
+    </form>
+    {% elif result  %}
+    <div id="result-popup" style="display: block;">
+        <h2>Building Information</h2>
+        <pre id="result-json">{{ result }}</pre>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    {% else %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-container">
+            <h2>Building Information</h2>
+            <input type="number" name="num_lifts" id="num_lifts" placeholder="Number of Lifts" />
+            <input type="number" name="num_floors" id="num_floors" placeholder="Number of Floors" />
+            <button type="Submit">Submit</button>
+          </div>
+    {% endif %}
+
+    
+
+  <div id="result-popup">
+    <h2>Building Information</h2>
+    <pre id="result-json"></pre>
+    <button onclick="closePopup()">Close</button>
+  </div>
+  <script>
+    function closePopup() {
+      //give code to refresh the page
+        window.location.href = "";
+    }
+    </script>
+</body>
+</html>

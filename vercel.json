@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "lify/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "lift/wsgi.py"
+      }
+    ]
+  }
