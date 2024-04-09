@@ -81,7 +81,7 @@ LIFT 2: 10 SECONDS
 
 ```
 
-## Setup and Running the Project
+## Setup and Running the Django Project
 
 1. **Clone the repository**
     ```
