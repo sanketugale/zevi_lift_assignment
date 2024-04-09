@@ -81,7 +81,14 @@ LIFT 1 -- > 3 (CLOSE), LIFT 2 -- > 0 (OPEN),
 LIFT 2: 10 SECONDS
 
 ```
-## Django Preview
+## Python Code Preview Video 
+
+
+https://github.com/Sanket-Ugale/zevi_lift_assignment/assets/121743571/cd98a005-2108-4a1e-8242-36c12d025b82
+
+
+
+## Django Preview Video
 
 https://github.com/Sanket-Ugale/zevi_lift_assignment/assets/121743571/376e8f1c-72dc-4c88-99b2-5655aa390ddd
 
