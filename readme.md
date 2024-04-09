@@ -129,9 +129,3 @@ https://github.com/Sanket-Ugale/zevi_lift_assignment/assets/121743571/376e8f1c-7
     ```
 
 Now, you can navigate to `http://127.0.0.1:8000/` in your web browser to view the application.
-
-## Running Tests
-
-To run tests, use the following command:
-
-
