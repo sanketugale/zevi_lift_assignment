@@ -1,5 +1,6 @@
 # Zevi Lift Assignment
 
+
 **Python Code**
 ```
 class Lift:
@@ -80,6 +81,10 @@ LIFT 1 -- > 3 (CLOSE), LIFT 2 -- > 0 (OPEN),
 LIFT 2: 10 SECONDS
 
 ```
+## Django Preview
+
+https://github.com/Sanket-Ugale/zevi_lift_assignment/assets/121743571/376e8f1c-72dc-4c88-99b2-5655aa390ddd
+
 
 ## Setup and Running the Django Project
 
