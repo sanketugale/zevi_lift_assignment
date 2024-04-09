@@ -90,11 +90,12 @@ https://github.com/Sanket-Ugale/zevi_lift_assignment/assets/121743571/376e8f1c-7
 
 1. **Clone the repository**
     ```
-    git clone https://github.com/Sanket-Ugale/zevi_lift_assignment.git ```
+    git clone https://github.com/Sanket-Ugale/zevi_lift_assignment.git 
+    ```
 
 2. **Navigate into the project directory**
     ```
-    cd projectname
+    cd zevi_lift_assignment
     ```
 
 3. **Create a virtual environment**
